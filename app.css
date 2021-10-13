@@ -9,6 +9,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #b22222;
   background-color: rgb(37, 35, 35);
@@ -16,7 +17,7 @@ header {
 .points {
   display: flex;
   flex-direction: row;
-  margin-right: 150px;
+  flex-shrink: 0.5;
 }
 
 .point * {
@@ -27,7 +28,8 @@ header h1 {
   color: #b22222;
   font-weight: bolder;
   font-size: 50px;
-  margin-right: 150px;
+
+  margin-right: 20px;
 }
 
 header h3 {
@@ -40,7 +42,7 @@ header h3 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 10px;
+  flex-shrink: 1;
 }
 
 .selection * {
@@ -57,11 +59,14 @@ select {
 }
 
 header button {
+  width: 150px;
+  height: 50px;
   border: none;
   outline: none;
   background-color: firebrick;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  line-height: 0.5;
   font-size: 20px;
   color: white;
   font-family: "Nunito", sans-serif;
@@ -72,6 +77,107 @@ header button {
 header button:active {
   transform: translate(1px, 1px);
   box-shadow: 0.5px 1px rgb(230, 134, 134);
+}
+
+@media screen and (max-width: 1420px) {
+  header {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+  header h1 {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .selection {
+    flex-direction: column;
+  }
+  .selection * {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  select {
+    text-align: center;
+    border-radius: 10px;
+  }
+  #categories {
+    width: 320px;
+  }
+
+  header button {
+    width: 200px;
+    height: 25px;
+    line-height: 0.5px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  header h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+  }
+  header h3 {
+    font-size: 15px;
+  }
+  .selection {
+    flex-direction: column;
+  }
+  #categories {
+    width: 250px;
+    height: 30px;
+    padding: 1px;
+  }
+
+  #difficulty {
+    height: 25px;
+    padding: 1px;
+  }
+  .selection * {
+    margin-bottom: 20px;
+  }
+
+  header button {
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+  header h3 {
+    font-size: 12px;
+  }
+
+  #categories {
+    width: 250px;
+    height: 30px;
+    padding: 1px;
+  }
+
+  #difficulty {
+    height: 25px;
+    padding: 1px;
+  }
+
+  header button {
+    width: 150px;
+    height: 25px;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 5px;
+  }
 }
 
 .content {
@@ -96,4 +202,29 @@ header button:active {
   text-align: center;
   line-height: 50px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  .content h2 {
+    font-size: 20px;
+  }
+  .choice {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .choice {
+    width: 250px;
+    height: 35px;
+    font-size: 13px;
+    line-height: 40px;
+  }
 }
