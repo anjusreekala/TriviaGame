@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis" rel="stylesheet">
+    <link href ="./app.css" rel="stylesheet">
+    <title>Trivia Game</title>
+</head>
+<body>
+<header>
+    <h1>Trivia Quiz Game</h1>
+    <div class ="points">
+        <h3>Correct Answers: <span id = "correct">0</span></h3>
+        <h3>Wrong Answers: <span id = "wrong">0</span></h3>
+    </div>
+    
+    <div class ="selection">
+        <select name="Category" id="categories">
+        </select>
+        <select name="Difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button class = "btn">Start</button>
+    </div>
+    
+    
+</header>   
+
+<div class ="content">
+    <h2 class = "question"></h2>
+    <div class = "options"></div>
+</div>
+
+
+    
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
+
