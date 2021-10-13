@@ -3,7 +3,7 @@ var selectedCategory = 27;
 var selectedDifficulty ="easy";
 var question = document.querySelector(".question");
 
-$(window).on("load",function(){
+$(document).ready(function(){
     populateQuestion();
 })
 
