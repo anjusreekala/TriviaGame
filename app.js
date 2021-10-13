@@ -75,12 +75,19 @@ function updateUI(res){
     $(".choice").on("click",function(){
         let decision = checkAnswer(this,correctAnswer);
         if(decision){
-            $(this).css("background-color", "green");
+            //$(this).css("background-color", "green");
+            $(this).css({
+                "box-shadow": "inset 0 0 0 2.5em green",
+                "border": "1px solid lime"
+            });
             let countP = parseInt($("#correct").html()) + 1;
             $("#correct").html(countP);
             setTimeout(populateQuestion, 1000);
         } else{
-            $(this).css("background-color", "red");
+            $(this).css({
+                "box-shadow": "inset 0 0 0 2.5em red",
+                "border": "1px solid crimson"
+            });
             //console.log($(".choice"));
             $("p").each(function(element){
                 if($(this).html() === correctAnswer){
