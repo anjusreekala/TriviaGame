@@ -8,7 +8,7 @@ var question = document.querySelector(".question");
 //    populateQuestion();
 //})
 
-$(butn).click(populateQuestion);
+
 
 function fillCategory(){
     var category = document.getElementById("categories");
@@ -128,3 +128,4 @@ function checkAnswer(choice,correctAnswer){
 
 fillCategory();
 populateQuestion();
+$(butn).click(populateQuestion);
