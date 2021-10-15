@@ -4,9 +4,9 @@ var selectedDifficulty ="easy";
 var question = document.querySelector(".question");
 
 
-$(document).ready(function(){
-    populateQuestion();
-})
+//$(document).ready(function(){
+//    populateQuestion();
+//})
 
 $(butn).click(populateQuestion);
 
@@ -127,3 +127,4 @@ function checkAnswer(choice,correctAnswer){
 }
 
 fillCategory();
+populateQuestion();
